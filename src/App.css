@@ -1,38 +1,87 @@
-.App {
+.General {
+  background-color: #83A8C3;
+  font-size: calc(10px + 6vmin);
+  color: black;
+}
+
+.Top-text{
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  max-width: 80%
 }
+
+.image {
+  flex-basis: 25%
+  
+}
+.bfp {
+  flex-basis: 35%;
+  padding-left: 75px;
+}
+
+.text_left {
+  padding-right: 225px;
+}
+
+.bfp_text {
+  font-size: calc(10px + 5vmin);
+  padding-left: 100px;
+}
+
+.sewa_text{
+  font-size: calc(10px + 5vmin);
+  padding-right: 225px;
+}
+
+.sewa {
+  flex-basis: 25%;
+  padding-left: 70px;
+}
+
+.scheme{
+  flex-basis: 15%;
+  padding-right: 50px;
+  padding-left: 100px;
+}
+
+.ants{
+  flex-basis: 25%;
+  padding-left: 400px;
+}
+
+.scheme_text{
+  padding-left: 100px;
+  font-size: calc(10px + 5vmin);
+}
+
+.github {
+  flex-basis: 40%;
+  padding-left: 200px;
+}
+
+.email {
+  flex-basis: 55%;
+  padding-left: 135px;
+}
+
+.linkedin {
+  flex-basis: 45%;
+  padding-left: 130px;
+  padding-right: 100px;
+}
+
+.github_text{
+  padding-left: 230px;
+  font-size: calc(10px + 5vmin);
+  color: black;
+}
+
