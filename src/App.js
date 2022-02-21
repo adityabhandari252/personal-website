@@ -29,9 +29,10 @@ function App() {
             <p>
               <bold>hi there,</bold> <br></br>
               I’m Aditya Bhandari!<br></br>
-              Versatile Leader, <br></br>
+              A Versatile Leader, <br></br>
               Driven Innovator, <br></br>
-              FinTech Enthusiast
+              FinTech Enthusiast, <br></br>
+              and Golden Bear.
             </p>
           </div>
           <div class="image">
@@ -108,13 +109,27 @@ function App() {
       </body>
 
       <body>
-        <div class="scheme_text">
-          <p>
-            Used Python to build <br></br>
-            an interpreter for a <br></br>
-            subset of the Scheme <br></br>
-            programming language
-          </p>
+        <div class="container">
+          <div class="scheme_text">
+            <p>
+              Used Python to build 
+              <br></br>
+              an interpreter for a  
+              <br></br>
+              subset of the Scheme 
+              <br></br>
+              programming language
+            </p>
+          </div>
+          <div class="ants_text">
+            Created a tower defense  
+            <br></br>
+            game using Object-Oriented 
+            <br></br>
+            Programming principles 
+            <br></br>
+            in Python
+          </div>
         </div>
       </body>
 
@@ -148,6 +163,8 @@ function App() {
       <body>
       <div class="github_text">
         <a href="https://github.com/adityabhandari252/" target="_blank">github</a> 
+        <a style={{ marginLeft: '19rem'}} href="mailto:adityabhandari@berkeley.edu">email</a>
+        <a style={{ marginLeft: '19.5rem'}} href="https://www.linkedin.com/in/adityabhandari25/" target="_blank">linkedin</a> 
       </div>
       </body>
 

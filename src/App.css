@@ -75,7 +75,7 @@ img {
 
 .linkedin {
   flex-basis: 45%;
-  padding-left: 130px;
+  padding-left: 120px;
   padding-right: 100px;
 }
 
@@ -83,5 +83,11 @@ img {
   padding-left: 230px;
   font-size: calc(10px + 5vmin);
   color: black;
+}
+
+.ants_text{
+  padding-left: 200px;
+  padding-right: 50px;
+  font-size: calc(10px + 5vmin);
 }
 
