@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import myface from "./myface.jpeg"
 import bfp_logo from "./berkeley_food_pantry.png"
@@ -8,12 +7,46 @@ import ants_logo from "./ants_logo.png"
 import github_logo from"./github_logo.png"
 import email_logo from "./email_logo.png"
 import linkedin_logo from "./linkedin_logo.png"
-
+import axios from "axios";
+import React from "react";
+import Experience from './Experience.js';
 
 
 function App() {
+  const [allData, setAllData] = React.useState(null);
+  async function fetchData() {
+    const dataRes = await axios.get(
+      "https://api.airtable.com/v0/appRVmHMBgxcoQxHG/experience",
+      {
+        headers: {
+          authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+        },
+      }
+    );
+
+    setAllData(dataRes.data.records);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (!allData) {
+      return <div></div>;
+  }
+
+    console.log(allData);
+
+  
+
+  
+
   return (   
     <div className="General">
+
+      {/* {allData.map((record) => (
+            <App key={record.id} info={record.fields} />
+          ))} */}
 
       <div className="Top-text">
         <body>
@@ -51,7 +84,11 @@ function App() {
           <bold>experiences</bold>
         </body>
       </div>
-      
+         
+      {allData.map((record) => (
+            <div className="container"><Experience key={record.id} position={record.position} imageURL={record.fields.imageURL} text={record.fields.text} /></div>
+          ))}
+
       <body>
         <div class="container">
         <div class="bfp">
@@ -68,7 +105,7 @@ function App() {
           </div>
         </div>
       </body>
-
+      
       <body>
         <div class="container">
           <div class="sewa_text">
@@ -77,7 +114,7 @@ function App() {
               10 to research and build<br></br>
               strategies to combat<br></br>
               food insecurity in the<br></br>
-              Bay Area
+              Bay Area.
             </p>
           </div>
           <div class="sewa">
@@ -118,7 +155,7 @@ function App() {
               <br></br>
               subset of the Scheme 
               <br></br>
-              programming language
+              programming language.
             </p>
           </div>
           <div class="ants_text">
@@ -128,7 +165,7 @@ function App() {
             <br></br>
             Programming principles 
             <br></br>
-            in Python
+            in Python.
           </div>
         </div>
       </body>
